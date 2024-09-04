@@ -6,12 +6,12 @@
 #    By: aeberius <aeberius@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/23 21:27:32 by aeberius          #+#    #+#              #
-#    Updated: 2024/08/24 03:13:00 by aeberius         ###   ########.fr        #
+#    Updated: 2024/09/04 13:35:06 by aeberius         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 ################################################################################
-#                                 Makefile rules                               #
+#                                 Makefile Rules                               #
 ################################################################################
 
 # Makefile settings
@@ -30,10 +30,10 @@ LIBFT_DIR = Libft/
 LIBFT = $(LIBFT_DIR)libft.a
 
 # Source files for server and client
-SERVER_SRCS = server.c utils.c
-CLIENT_SRCS = client.c utils.c
-SERVER_SRCS_BONUS = server_bonus.c utils.c
-CLIENT_SRCS_BONUS = client_bonus.c utils.c
+SERVER_SRCS = server.c
+CLIENT_SRCS = client.c
+SERVER_SRCS_BONUS = server_bonus.c
+CLIENT_SRCS_BONUS = client_bonus.c
 
 # Object files
 SERVER_OBJS = $(SERVER_SRCS:.c=.o)
@@ -57,14 +57,6 @@ $(NAME): $(LIBFT) $(SERVER_OBJS) $(CLIENT_OBJS)
 $(LIBFT):
 	$(MAKE) -C $(LIBFT_DIR)
 
-# Rule to compile object files from source files
-%.o : %.c
-	$(CC) $(FLAGS) -c $< -o $@
-
-# Bonus target: Compile the bonus executables
-bonus: $(NAME_BONUS)
-
-# Linking the bonus executables
 $(NAME_BONUS): $(LIBFT) $(SERVER_OBJS_BONUS) $(CLIENT_OBJS_BONUS)
 	$(CC) $(FLAGS) -o server_bonus $(SERVER_OBJS_BONUS) $(LIBFT)
 	$(CC) $(FLAGS) -o client_bonus $(CLIENT_OBJS_BONUS) $(LIBFT)
