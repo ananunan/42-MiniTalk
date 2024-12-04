@@ -71,5 +71,10 @@ In the terminal, run the server first:
 In a separate terminal, run the client with the server PID and the message you want to send:
 `./client <server_pid> "Your message here"`
 
-
 5. The server will receive the message and print it in the terminal! 🎉
+
+## 🌟 **Why Minitalk**?
+
+- **Simple and Lightweight**: Minitalk is a minimalistic project that shows how powerful Unix signals can be for inter-process communication.
+- **Learning Opportunity**: This project is perfect for understanding signals, binary encoding, and how to build client-server applications with just a few lines of code.
+- **Fun**: It’s a fun way to use something as simple as signals to send messages between processes!
