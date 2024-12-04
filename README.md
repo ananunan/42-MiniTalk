@@ -33,12 +33,6 @@ The main goal of **Minitalk** is to create a client-server communication system 
 
 ---
 
-## 🎉 **Bonus Features**
-- Support for **Unicode characters**, making your messages even more fun and expressive!  
-- Added **server acknowledgment** after receiving each message to confirm successful communication.
-
----
-
 ## 🛠️ **Technical Implementation**
 
 ### **Signal Usage**
